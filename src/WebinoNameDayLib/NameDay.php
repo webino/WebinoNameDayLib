@@ -13,12 +13,12 @@ namespace WebinoNameDayLib;
 use DateTime;
 
 /**
- * 
+ *
  */
 class NameDay
 {
     /**
-     * @var National\NamesInterface
+     * @var Region\NamesInterface
      */
     protected $names;
 
@@ -28,9 +28,9 @@ class NameDay
     protected $dayCache = array();
 
     /**
-     * @param National\NamesInterface $names
+     * @param Region\NamesInterface $names
      */
-    public function __construct(National\NamesInterface $names)
+    public function __construct(Region\NamesInterface $names)
     {
         $this->names = $names;
     }

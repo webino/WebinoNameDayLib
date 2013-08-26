@@ -34,7 +34,7 @@ class Factory
             throw new InvalidArgumentException('Could not parse locale ' . $locale);
         }
 
-        $class = __NAMESPACE__ . '\National\\' . ucfirst(strtolower($parsedLocale['region']));
+        $class = __NAMESPACE__ . '\Region\\' . ucfirst(strtolower($parsedLocale['region']));
 
         if (!class_exists($class)) {
             throw new RuntimeException('Could not find a ' . $class);

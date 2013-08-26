@@ -14,7 +14,7 @@ class NameDayTest
     protected $object;
 
     /**
-     * @var WebinoNameDayLib\National\AbstractNames
+     * @var WebinoNameDayLib\Region\AbstractNames
      */
     protected $names;
 
@@ -24,7 +24,7 @@ class NameDayTest
      */
     protected function setUp()
     {
-        $this->names  = $this->getMock('WebinoNameDayLib\National\AbstractNames');
+        $this->names  = $this->getMock('WebinoNameDayLib\Region\AbstractNames');
         $this->object = new NameDay($this->names);
     }
 

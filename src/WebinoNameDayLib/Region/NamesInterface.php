@@ -8,10 +8,10 @@
  * @license     New BSD License
  */
 
-namespace WebinoNameDayLib\National;
+namespace WebinoNameDayLib\Region;
 
 /**
- * 
+ *
  */
 interface NamesInterface extends \ArrayAccess
 {
