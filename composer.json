@@ -1,0 +1,31 @@
+{
+    "name": "webino/webino-name-day-lib",
+    "description": "Name day Library",
+    "type": "library",
+    "keywords": [
+        "webino", "name", "day", "lib"
+    ],
+    "homepage": "https://github.com/webino/WebinoNameDayLib.git",
+    "authors": [
+        {
+            "name": "Webino, s. r. o.",
+            "email": "info@webino.sk",
+            "homepage": "http://www.webino.sk/",
+            "role": "Developer"
+        },
+        {
+            "name": "Peter Bačinský",
+            "email": "peter@bacinsky.sk",
+            "homepage": "http://www.bacinsky.sk/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "WebinoNameDayLib": "src/"
+        }
+    }
+}
