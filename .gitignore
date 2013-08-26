@@ -7,4 +7,5 @@ nbproject/private
 .project
 .settings
 composer.lock
+composer.phar
 !.gitignore

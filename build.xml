@@ -24,6 +24,14 @@
         <phingCall target="update"/>
     </target>
 
+    <target name="update" depends="prepare">
+        <echo>Updating ...</echo>
+
+        <exec command="curl -sS https://getcomposer.org/installer | php" checkreturn="true" logoutput="true"/>
+        <exec command="php composer.phar self-update" checkreturn="true" logoutput="true"/>
+        <exec command="php composer.phar update --dev" checkreturn="true" logoutput="true"/>
+    </target>
+
 
     <target name="test">
         <echo>Testing ...</echo>
