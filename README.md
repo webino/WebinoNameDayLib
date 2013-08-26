@@ -79,10 +79,10 @@ Provides API to resolve name day. **Still under development.** (currently only S
 
   2. Open project in the (NetBeans) IDE
 
-**Adding nation names**
+**Adding region names**
 
-  1. Look at the `\WebinoNameDayLib\Nation\Sk`
-  2. It's best to extend `\WebinoNameDayLib\Nation\AbstractNames`
+  1. Look at the `\WebinoNameDayLib\Region\Sk`
+  2. It's best to extend `\WebinoNameDayLib\Region\AbstractNames`
 
 **Testing**
 
