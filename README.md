@@ -24,7 +24,7 @@ Provides API to resolve name day. **Still under development.** (currently only S
 
 ## QuickStart
 
-        // Create the name-day service
+        // Create the name day service
         $locale  = 'sk_SK';
         $factory = new \WebinoNameDayLib\Factory;
         $nameDay = $factory->create($locale);
@@ -39,13 +39,13 @@ Provides API to resolve name day. **Still under development.** (currently only S
             $text = 'Name-day today celebrating';
         }
 
-        // Name-day of the day
+        // Name day of the day
         $result->getName();
 
-        // Name-day of tomorrow
+        // Get tomorrow name day
         $result = $nameDay->tomorrow();
 
-        // Name-day of today & tomorrow
+        // Get today & tomorrow name day
         $arrayOfResults = $nameDay->combo();
 
 ## Functions
