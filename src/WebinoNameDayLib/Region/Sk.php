@@ -257,7 +257,7 @@ class Sk extends AbstractNames
         'Samuel',
         'Silvia',
         'Augustín',
-        'Nikola',
+        'Nikola, Nikolaj',
         'Ružena',
         'Nora',
         'Drahoslava',
