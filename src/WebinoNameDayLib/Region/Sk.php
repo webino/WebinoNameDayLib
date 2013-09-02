@@ -261,7 +261,7 @@ class Sk extends AbstractNames
         'Ružena',
         'Nora',
         'Drahoslava',
-        'Linda',
+        'Linda, Rebeka',
         'Belo',
         'Rozália',
         'Regína',
