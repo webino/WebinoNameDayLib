@@ -273,7 +273,7 @@ class Sk extends AbstractNames
         'Bystrík',
         'Mária, Marlena',
         'Ctibor',
-        'Ľubomil, Ľudomil',
+        'Ľudomil',
         'Jolana',
         'Ľudmila',
         'Olympia',
