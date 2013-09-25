@@ -1,4 +1,4 @@
-<?php
+V<?php
 /**
  * Webino (http://webino.sk)
  *
@@ -284,7 +284,7 @@ class Sk extends AbstractNames
         'Móric',
         'Zdenka',
         'Ľuboš, Ľubor',
-        'Vladislav, Vladislav',
+        'Vladislav, Vladislava',
         'Edita',
         'Cyprián',
         'Václav',
