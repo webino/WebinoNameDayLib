@@ -1,4 +1,4 @@
-V<?php
+<?php
 /**
  * Webino (http://webino.sk)
  *
