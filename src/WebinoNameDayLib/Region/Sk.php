@@ -284,7 +284,7 @@ class Sk extends AbstractNames
         'Móric',
         'Zdenka',
         'Ľuboš, Ľubor',
-        'Vladislav',
+        'Vladislav, Vladislav',
         'Edita',
         'Cyprián',
         'Václav',
