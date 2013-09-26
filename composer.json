@@ -26,6 +26,9 @@
     "autoload": {
         "psr-0": {
             "WebinoNameDayLib": "src/"
-        }
+        },
+        "classmap": [
+            "./src/"
+        ]
     }
 }
