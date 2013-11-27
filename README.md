@@ -8,6 +8,7 @@ Provides API to resolve name day. **Still under development.** (currently only S
 ## Features
 
   - Today and tomorrow name day according to the date
+  - Reverse resolving, name day date for a name
   - Holy day flag
 
 ## Setup
