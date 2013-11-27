@@ -20,7 +20,7 @@ class Sk extends AbstractNames
         'Alexandra, Karina',
         'Daniela',
         'Drahoslav',
-        'Andera',
+        'Andrea',
         'Antónia',
         'Bohuslav, Bohuslava',
         'Severín',
@@ -138,7 +138,7 @@ class Sk extends AbstractNames
         'Lea',
         'Anastázia',
         'Sviatok práce',
-        'Žigmunt',
+        'Žigmund',
         'Galina',
         'Florián',
         'Lesana, Lesia',
@@ -202,7 +202,7 @@ class Sk extends AbstractNames
         'Berta',
         'Miloslav',
         'Prokop',
-        'Sviatok sv. Cyrila a Metoda',
+        'Cyril a Metod',
         'Patrícia, Patrik',
         'Oliver',
         'Ivan',
@@ -319,7 +319,7 @@ class Sk extends AbstractNames
         'Sabína',
         'Dobromila, Kevin',
         'Klára',
-        'Šimon, Šimona',
+        'Šimon, Simona',
         'Aurélia',
         'Denisa, Denis',
         'Pamiatka zosnulých',
@@ -385,4 +385,6 @@ class Sk extends AbstractNames
     );
 
     protected $holyDays = array(0, 121, 186, 306, 359);
+
+    protected $splitPattern = '~( a )|(, )~';
 }

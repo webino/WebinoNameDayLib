@@ -36,6 +36,16 @@ class NameDay
     }
 
     /**
+     * Regular expression pattern to split name day for multiple names
+     *
+     * @return string
+     */
+    public function getNameSplitPattern()
+    {
+        return $this->names->getSplitPattern();
+    }
+
+    /**
      * @param string $date
      * @return NameDayResult
      */
@@ -68,6 +78,71 @@ class NameDay
     }
 
     /**
+     * Date of name day for a name
+     *
+     * @todo Can't use just DateTime from z format because of a leap year bug: https://bugs.php.net/bug.php?id=62476
+     * @param string $name
+     * @return DateTime|null
+     */
+    public function nameDate($name)
+    {
+        $day = $this->names->search($name);
+        if (null === $day) {
+            return null;
+        }
+
+        $dateTimeNow = $this->createDateTime();
+
+        if (!$dateTimeNow->format('L') && $day >= 59) {
+            // fix no leap year
+            $day--;
+        }
+
+        // DateTime bug hack
+        $time = strtotime($day . ' day', strtotime('1.1.' . $dateTimeNow->format('Y')));
+        $date = date('d.m.Y', $time);
+
+        return DateTime::createFromFormat('d.m.Y', $date);
+    }
+
+    /**
+     * Nearest valid name day date for a name
+     *
+     * When name day already was for the current year returns date for the next year.
+     *
+     * @param string $name
+     * @return DateTime|null
+     */
+    public function nearestNameDate($name)
+    {
+        $nameDateTime = $this->nameDate($name);
+        if (null === $nameDateTime) {
+            return null;
+        }
+
+        $dateTimeNow = $this->createDateTime();
+
+        if ($nameDateTime->format('Ynj') < $dateTimeNow->format('Ynj')) {
+
+            return $this->createDateTime(
+                $nameDateTime->format('d.m.')
+                . ($nameDateTime->format('Y') + 1)
+            );
+        }
+
+        return $nameDateTime;
+    }
+
+    /**
+     * @param string $time
+     * @return DateTime
+     */
+    protected function createDateTime($time = 'now')
+    {
+        return new DateTime($time);
+    }
+
+    /**
      * @param string $day
      * @return NameDayResult
      */
@@ -77,7 +152,7 @@ class NameDay
     }
 
     /**
-     * Return the day number
+     * The day number
      *
      * @param string $date
      * @return int
@@ -88,7 +163,7 @@ class NameDay
             return $this->dayCache[$date];
         }
 
-        $dateTime = new DateTime($date);
+        $dateTime = $this->createDateTime($date);
         $day      = $dateTime->format('z');
 
         if (!$dateTime->format('L') && $day >= 59) {
@@ -100,7 +175,7 @@ class NameDay
     }
 
     /**
-     * Return the next day number
+     * The next day number
      *
      * @param int $day
      * @return int
@@ -115,7 +190,7 @@ class NameDay
     }
 
     /**
-     * Return true if it's holyday
+     * True if it's holyday
      *
      * @param int $day
      * @return bool

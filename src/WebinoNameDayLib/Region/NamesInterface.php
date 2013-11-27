@@ -16,7 +16,19 @@ namespace WebinoNameDayLib\Region;
 interface NamesInterface extends \ArrayAccess
 {
     /**
+     * List of holy days numbers
+     *
      * @return array
      */
     public function getHolyDays();
+
+    /**
+     * Search for a name day
+     *
+     * Can handle search of name day for multiple names.
+     * 
+     * @param string $needle
+     * @return int|null
+     */
+    public function search($needle);
 }

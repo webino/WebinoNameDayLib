@@ -55,6 +55,8 @@ Provides API to resolve name day. **Still under development.** (currently only S
   * `NameDayResult today($date = 'now')`
   * `NameDayResult tomorrow($date = 'now')`
   * `array[NameDayResult, NameDayResult] combo($date = 'now')`
+  * `DateTime nameDate($name)`
+  * `DateTime nearestNameDate($name)`
 
 
 ### The result
@@ -95,6 +97,7 @@ Provides API to resolve name day. **Still under development.** (currently only S
 
   - Add Czech names
   - Add other nation names
+  - Tests for nameDate() & nearesetNameDate()
 
 ## Addendum
 
