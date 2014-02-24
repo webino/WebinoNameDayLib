@@ -70,7 +70,7 @@ class Sk extends AbstractNames
         'Eleonóra',
         'Etela',
         'Roman, Romana',
-        'Metej',
+        'Matej',
         'Frederik, Frederika',
         'Viktor',
         'Alexander',
